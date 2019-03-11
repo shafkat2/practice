@@ -27,7 +27,7 @@ class LinkedList(object):
         actualNode = self.head
         size = 0
         while actualNode is not None:
-            size+ = 1
+            size+=1
             actualNode - actualNode.nextNode
         
         return size
