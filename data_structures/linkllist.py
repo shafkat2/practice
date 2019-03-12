@@ -31,3 +31,22 @@ class LinkedList(object):
             actualNode - actualNode.nextNode
         
         return size
+
+    def insertEnd(self,data):
+        
+        self.size = self.size +1
+        newNode = Node(data)
+        acutalNode = self.head
+
+        while acutalNode is not None:
+            acutalNode = acutalNode.nextNode
+
+        acutalNode.nextNode = newNode
+    
+    def traverellist(self):
+
+        actualNode = self.head
+
+        while actualNode is not None:
+            print("%d",actualNode)
+            acutalNode = acutalNode.nextNode
