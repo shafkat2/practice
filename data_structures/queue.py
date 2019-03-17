@@ -16,3 +16,5 @@ class Queue:
     def peak(self):
         return self.queue[0]
 
+    def sizeQueue(self):
+        return len(self.queue)    
