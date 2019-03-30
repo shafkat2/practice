@@ -95,6 +95,12 @@ public class Vertex implements Comparable<Vertex>{
 	 */
 	public void setMinDistance(double minDistance) {
 		this.minDistance = minDistance;
-	}
+    }
+    
+    @Override
+
+    public int compareTo(Vertex otherVertex){
+        return double.compare(this.distance, otherVertex.getMinDistance());
+    }
 
 }
