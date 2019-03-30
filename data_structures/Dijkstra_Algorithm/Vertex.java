@@ -100,7 +100,7 @@ public class Vertex implements Comparable<Vertex>{
     @Override
 
     public int compareTo(Vertex otherVertex){
-        return double.compare(this.distance, otherVertex.getMinDistance());
+        return Double.compare(this.minDistance, otherVertex.getMinDistance());
     }
 
 }
