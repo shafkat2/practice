@@ -97,11 +97,13 @@ class binarySearchTree(object):
              node.leftchild = self.removeNode(tempNode.data, node.leftchild)
 
          return node
+
     def getPredecessor(self,node):
 
-         if node.rightChild:
-             return self.getPredecessor(node.leftchild)      
-    
+         if node.rightchild:
+             return self.getPredecessor(node.rightchild)      
+         return node
+
     def remove(self,data):
         if self.root:
             self.root = self.removeNode(data,self.root)

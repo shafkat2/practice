@@ -15,7 +15,18 @@ class AVL(object):
         if not node:    
             return -1
         return node.height
+    
+    def getPredecessor(self,node):
+
+         if node.rightChild:
+             return self.getPredecessor(node.rightChild)      
+         return node
+    
    
+    def remove(self,data):
+        if self.root:
+            self.root = self.removeNode(data,self.root)
+
     def insert(self,data):
         self.root = self.insertNode(data, self.root)
 
@@ -107,13 +118,67 @@ class AVL(object):
         node.height = max(self.calcHeight(node.rightChild), self.calcHeight(node.leftChild))
         tempRightChild.height = max(self.calcHeight(tempRightChild.rightChild), self.calcHeight(tempRightChild.leftChild))
 
-        return tempRightChild    
+        return tempRightChild
 
+    def removeNode(self,data,node):
+         if not node:
+             return node
+
+         if data < node.data:
+            node.leftChild = self.removeNode(data, node.leftChild)
+         elif data >node.data:
+             node.rightChild = self.removeNode(data,node.rightChild)
+         else:
+
+             if not node.leftChild and not node.rightChild:
+                 print("removing a leaf node")
+                 del node
+                 return None
+             if not node.leftChild:
+                 print("removing a node with left child")
+                 tempNode = node.leftChild
+                 del node
+                 return tempNode
+            
+             elif not node.rightChild:
+                 print("removing a node with right child")
+                 tempNode = node.leftChild
+                 del node
+                 return tempNode
+
+             print("removing node with two child")
+             tempNode = self.getPredecessor(node.leftChild)
+             node.data = tempNode.data 
+             node.leftChild = self.removeNode(tempNode.data, node.leftChild)
+         
+         if not node:
+                return node
+        
+         node.height = max(self.calcHeight(node.leftChild), self.calcHeight(node.rightChild))+1
+
+         balance = self.calcBalance(node)
+
+         if balance > 1 and self.calcBalance(node.leftChild) >= 0:
+             return self.rotateright(node)
+         
+         if balance > 1 and self.calcBalance(node.leftChild) < 0:
+             node.leftChild = self.rotateleft(node.leftChild)
+             return self.rotateright(node)
+
+         if balance < -1 and self.calcBalance(node.rightChild) <= 0:
+             return self.rotateelft(node)
+
+         if balance > -1 and self.calcBalance(node.leftChild) > 0:
+             node.rightChild = self.rotateright(node.rightChild)
+             return self.rotateleft(node)
+         return node
 
 avl = AVL()
 
 avl.insert(10)
 avl.insert(20)
 avl.insert(30)
+
+avl.remove(20)
 
 avl.travers()
