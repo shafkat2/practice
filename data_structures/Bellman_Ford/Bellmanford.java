@@ -17,13 +17,14 @@ public class Bellmanford {
     public void bellmanFord(Vertex sourceVertex){
         sourceVertex.setDistance(0);
 
-        for(int i = 0; i<vertexList.size()-1;i++){ // v-1 interation wer relax all the edges
+        for(int i = 0; i<vertexList.size()-1;++i){ // v-1 interation we relax all the edges
             for(Edges edge : edgeList){
 
                 Vertex u = edge.getStartVertex();
                 Vertex v = edge.getEndVertex();
 
-                if(u.getDistance() == Double.MAX_VALUE){
+                if(u.getDistance() == Double.MAX_VALUE) continue;
+
                     double newDistance  = u.getDistance() + edge.getWeight();
 
                     if(newDistance < v.getDistance()){
@@ -31,7 +32,7 @@ public class Bellmanford {
                         v.setDistance(newDistance);
                         v.setPreviousVertex(u);
                     }
-                }
+                
             }
         }
         for(Edges edge: edgeList){
@@ -54,9 +55,11 @@ public class Bellmanford {
             System.out.println("there is no path from source to the Target Vertex");
 
         }
+
+        System.out.print("the shortest path ");
         Vertex actualVertex = targetVertex;
         while(actualVertex.getPreviousVertex() != null){
-            System.out.println(actualVertex + "-");
+            System.out.print(actualVertex + "-");
             actualVertex = actualVertex.getPreviousVertex();
         }
     }   

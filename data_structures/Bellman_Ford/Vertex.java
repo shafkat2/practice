@@ -11,7 +11,7 @@ public class Vertex{
     private Vertex previousVertex;
     private List<Edges> adjacencies;
 
-    private Vertex(String name){
+    public Vertex(String name){
         this.name = name;
         this.adjacencies = new ArrayList<>();        
     }
