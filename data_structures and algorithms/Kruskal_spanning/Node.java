@@ -1,1 +1,0 @@
-package kruskal_spanning;

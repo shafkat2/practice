@@ -1,4 +1,4 @@
-package  kruskal_spanning;
+package  Kruskal;
 
 
 public class Vertex{
