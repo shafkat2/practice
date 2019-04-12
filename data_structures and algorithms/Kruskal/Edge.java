@@ -1,6 +1,6 @@
 package Kruskal;
 
-public class Edge implements Comporable<Edge>{
+public class Edge implements Comparable<Edge>{
     
     private double weight;
     private Vertex startVertex;
@@ -54,6 +54,8 @@ public class Edge implements Comporable<Edge>{
 	public void setTargetVertex(Vertex targetVertex) {
 		TargetVertex = targetVertex;
 	}
-
-
+	@Override
+	public int compareTo(Edge edges){
+		return Double.compare(this.weight, edge.getWeight());
+	}
 }

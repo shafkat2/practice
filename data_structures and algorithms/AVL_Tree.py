@@ -166,7 +166,7 @@ class AVL(object):
              return self.rotateright(node)
 
          if balance < -1 and self.calcBalance(node.rightChild) <= 0:
-             return self.rotateelft(node)
+             return self.rotateleft(node)
 
          if balance > -1 and self.calcBalance(node.leftChild) > 0:
              node.rightChild = self.rotateright(node.rightChild)
