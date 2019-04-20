@@ -6,7 +6,7 @@ public class Edge implements Comparable<Edge>{
     private Vertex startVertex;
     private Vertex TargetVertex;
 
-    public Edge (double weight, Vertex startVertex, Vertex TargetVertex){
+    public Edge ( Vertex startVertex, Vertex TargetVertex,double weight){
 
         this.weight = weight;
         this.startVertex = startVertex;
