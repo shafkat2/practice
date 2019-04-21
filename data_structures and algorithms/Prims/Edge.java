@@ -55,4 +55,9 @@ public class Edge implements Comparable<Edge>{
     public void setTargetVertex(Vertex targetVertex) {
         this.targetVertex = targetVertex;
     }
+
+    @Override
+    public int compareTo(Edge otherEdge){
+        return Double.compare(this.weight, otherEdge.getWeight());
+    }
 }
