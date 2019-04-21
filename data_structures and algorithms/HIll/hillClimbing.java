@@ -7,7 +7,7 @@ public class hillClimbing{
     private static final double END_INTERVAL = 2;
 
     private double f(double x){
-        return -x(x-1)*(x-1)+2;
+        return -(x-1)*(x-1)+2;
     }
 
     public void HillClimbing(){
