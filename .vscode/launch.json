@@ -4,6 +4,13 @@
             "type": "java",
             "name": "CodeLens (Launch) - App",
             "request": "launch",
+            "mainClass": "Prims.App",
+            "projectName": "project_javascript_33ff6d14"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - App",
+            "request": "launch",
             "mainClass": "Hill.App"
         },
         {

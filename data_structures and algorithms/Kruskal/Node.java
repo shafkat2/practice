@@ -6,7 +6,7 @@ public class Node {
     private int rank;
     private Node parent;
 
-    public Node(int id, int rank, int parent){
+    public Node(int id, int rank, Node parent){
         this.id = id;
         this.rank  = rank;
         this.parent = parent; 

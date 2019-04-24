@@ -1,5 +1,6 @@
 package Prims;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Vertex{
@@ -11,7 +12,7 @@ public class Vertex{
 
     public Vertex(String name){
         this.name = name;
-        thos.adjacenceis = new ArrayList<>();
+        this.adjacenceis = new ArrayList<>();
     }
 
     @Override

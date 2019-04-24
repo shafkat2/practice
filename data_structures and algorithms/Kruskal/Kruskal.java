@@ -1,13 +1,12 @@
 package  Kruskal;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
 public class kruskal{
 
-        public void spanningTree (List<vertex> vertexList, List<Edge> edgeList){
+        public void spanningTree (List<Vertex> vertexList, List<Edge> edgeList){
 
             Disjoint_set disjoint_set = new Disjoint_set(vertexList);
 

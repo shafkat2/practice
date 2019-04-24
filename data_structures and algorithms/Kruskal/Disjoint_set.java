@@ -1,6 +1,8 @@
 package Kruskal;
 
-public class Disjoint_set{
+import java.util.List;
+
+public class Disjoint_set {
 
     private int nodeCount = 0;
     private int setCount = 0;
@@ -8,8 +10,8 @@ public class Disjoint_set{
 
 
     public Disjoint_set(List<Vertex> vertexes){
-        this.rootNode = new ArrayList<>(vertexes.size());
-        maeksets(vertexes);
+        this.rootNode = new List<>(vertexes.size());
+        makeSets(vertexes);
     }
 
     public void makeSets(List<Vertex> vertexes){
@@ -59,10 +61,10 @@ public class Disjoint_set{
             if(root1.getRank() < root2.getRank()){
                 root1.setParent(root2);
             }else if(root1.getRank() > root2.getRank()){
-                root.setParent(root1);
+                root2.setParent(root1);
             }else{
                 root2.setParent(root1);
-                root1.setRank(roo1.getRank()+1);
+                root1.setRank(root1.getRank()+1);
             }
 
         this.setCount --;

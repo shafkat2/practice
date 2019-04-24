@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
 
-public class Algorirhm{
-
+public class Algorithm{
+ 
     private List<Vertex> unvisitedVertex;
     private List<Edge> spanninTree;
     private PriorityQueue<Edge> edgeHeap;
     double  fullcost;
 
-    public Algorirhm(List<Vertedx> unvisitedVertex){
+    public Algorithm(List<Vertex> unvisitedVertex){
         this.spanninTree = new ArrayList<>();
         this.unvisitedVertex = unvisitedVertex;
         this.edgeHeap = new PriorityQueue<>();
