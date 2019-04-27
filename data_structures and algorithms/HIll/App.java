@@ -1,4 +1,4 @@
-package Hill;
+package HIll;
 
 
 public class App{
