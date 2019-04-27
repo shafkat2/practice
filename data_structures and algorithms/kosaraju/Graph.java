@@ -62,6 +62,8 @@ public class Graph {
         for(Edge edge: this.edgeList){
             transposeVertexList.get(transposeVertexList.indexOf(edge.getTargetVertex())).addNeighbour(edge.getStartVertex());
         }
+
+        transposeVertexList.setVertexList(transposeVertexList);
     }
 
 }

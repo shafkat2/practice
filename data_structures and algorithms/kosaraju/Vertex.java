@@ -88,6 +88,6 @@ public class Vertex {
     }
 
     public void addNeighbour(Vertex vertex){
-        this.adjacenciesList.add(vertex)
+        this.adjacenciesList.add(vertex);
     }
 }
