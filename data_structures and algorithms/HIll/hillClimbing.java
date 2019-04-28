@@ -4,7 +4,7 @@ package HIll;
 public class hillClimbing{
 
     private static final double START_INTERVAL = -2;
-    private static final double END_INTERVAL = 2;
+
 
     private double f(double x){
         return -(x-1)*(x-1)+2;

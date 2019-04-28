@@ -13,12 +13,15 @@ public class Graph {
 
 
 
-        public Graph(List<Vertex> vertexList,List<Edge> edgeList){
+    public Graph(List<Vertex> vertexList,List<Edge> edgeList){
 
             this.vertexList = vertexList;
             this.edgeList = edgeList;
-        }
+    }
         
+    public Graph() {
+    }
+
     /**
      * @return the edgeList
      */
@@ -60,7 +63,10 @@ public class Graph {
             transposeVertexList.get(transposeVertexList.indexOf(edge.getTargetVertex())).addNeighbour(edge.getStartVertex());
         }
 
-        transposeVertexList.setVertexList(transposeVertexList);
+        transposed.setVertexList(transposeVertexList);
+
+
+        return transposed;
     }
 
 }

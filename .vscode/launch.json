@@ -4,6 +4,13 @@
             "type": "java",
             "name": "CodeLens (Launch) - App",
             "request": "launch",
+            "mainClass": "HIll.App",
+            "projectName": "project_javascript_33ff6d14"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - App",
+            "request": "launch",
             "mainClass": "SimulatedAnealing.App",
             "projectName": "project_javascript_33ff6d14"
         },
