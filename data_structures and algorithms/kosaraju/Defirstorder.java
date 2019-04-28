@@ -23,6 +23,8 @@ public class Defirstorder{
                 dfs(v);
             }
         }
+
+        stack.push(vertex);
     }
 
     public Stack<Vertex> getReversePost(){
