@@ -12,11 +12,8 @@ public class Graph {
 
 
 
-        public Graph(){
 
-        }
-
-        public Graph(List<vertex) vertexList,List<Edge> edgeList){
+        public Graph(List<Vertex> vertexList,List<Edge> edgeList){
 
             this.vertexList = vertexList;
             this.edgeList = edgeList;
