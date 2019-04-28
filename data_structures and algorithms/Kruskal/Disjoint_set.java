@@ -19,7 +19,7 @@ public class Disjoint_set {
             makeSets(v);
         }
     }
-    public void maeksets(Vertex Vertex){
+    public void makeSets(Vertex Vertex){
         Node n = new Node(0,rootNode.size(),null);
         Vertex.setNode(n);
         this.rootNode.add(n);
