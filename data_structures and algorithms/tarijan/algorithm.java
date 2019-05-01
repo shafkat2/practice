@@ -12,7 +12,7 @@ public class algorithm {
     private List<vertex> vertexList;
     private List<List<vertex>> connectedComponentList;
     private int time = 0;
-    private int count;
+    private int count = 0;
 
 
     public algorithm(List<vertex> VertexList){
@@ -50,7 +50,7 @@ public class algorithm {
             }
         }
         if(isComponentRoot){
-            count++;
+           this.count++;
 
             System.out.println("vertex "+vertex+ " is the root of the SCC");
             List<vertex> component = new ArrayList<>();

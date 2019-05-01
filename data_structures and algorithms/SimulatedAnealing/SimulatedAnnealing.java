@@ -29,6 +29,7 @@ public class SimulatedAnnealing {
     }
     
     private double getRandomX() {
+        System.out.println(randomGenerator.nextDouble());
         return randomGenerator.nextDouble()*(Constance.MAX_COORDINATE - Constance.MiN_COORDINATE)+ Constance.MiN_COORDINATE;
     }
 

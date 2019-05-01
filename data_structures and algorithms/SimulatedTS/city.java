@@ -7,6 +7,7 @@ public class city{
 
     public city(){
         this.x = (int )(Math.random()*100);
+        this.y = (int )(Math.random()*100);
     }
 
     public city(int x , int y){
@@ -43,7 +44,18 @@ public class city{
         this.y = y;
     }
 
-    public double distanceTo(city othercCity){
+    public double distanceTo(city otherCity){
+        int xDistance = Math.abs(getX()- otherCity.getX());
+        int yDistance = Math.abs(getY()-otherCity.getX());
+
+
+        double distance = Math.sqrt((xDistance*xDistance) + (yDistance*yDistance));
         
+
+        return distance;
+    }
+    public String toString(){
+        
+        return this.x +" -"+ this.y;
     }
 }

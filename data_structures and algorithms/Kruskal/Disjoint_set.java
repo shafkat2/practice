@@ -10,7 +10,7 @@ public class Disjoint_set {
 
 
     public Disjoint_set(List<Vertex> vertexes){
-        this.rootNode = new List<>(vertexes.size());
+        this.rootNode = new List<Node>(vertexes.size());
         makeSets(vertexes);
     }
 

@@ -4,6 +4,27 @@
             "type": "java",
             "name": "CodeLens (Launch) - App",
             "request": "launch",
+            "mainClass": "Bellman_Ford.App",
+            "projectName": "project_javascript_1c7dddd2"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - App",
+            "request": "launch",
+            "mainClass": "HIll.App",
+            "projectName": "project_javascript_1c7dddd2"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - app",
+            "request": "launch",
+            "mainClass": "SimulatedTS.app",
+            "projectName": "project_javascript_1c7dddd2"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - App",
+            "request": "launch",
             "mainClass": "SimulatedAnealing.App"
         },
         {
