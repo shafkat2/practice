@@ -45,12 +45,9 @@ public class singleTour{
                 else{
                     destinationCity = getCity(0);
                 }
-                try{
+    
                 tourDistance += fromCity.distanceTo(destinationCity);
-                }catch(NullPointerException e){
-                        System.out.println(e.getMessage());
-                        break;     
-                }
+         
             }
             this.distance = tourDistance;
         }
