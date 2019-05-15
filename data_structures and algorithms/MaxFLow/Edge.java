@@ -25,7 +25,35 @@ public class Edge {
         this.capacity = edge.getCapacity();
         this.flow = edge.getFlow();
     }
+    public vertex getOther(vertex vertex){
+        if(vertex == fromVertex){
+            return targetVertex;
+        }else{
+            return fromVertex;
+        }
+    }
+    public double getResidualCapacity(vertex vertex){
+            if(vertex == fromVertex){
+                return flow; //backward edge
+            }else{
+                return capacity - flow; // forward edge
+            }
+    }
 
+    public void addResidualFlowTo(vertex vertex,double deltaFlow){
+
+        if(vertex == fromVertex){
+            flow = flow - deltaFlow; // backward edge
+        }else{
+            flow = flow + deltaFlow; // forward edge
+        }
+    }
+
+
+    @Override
+    public String toString(){
+        return fromVertex+"-"+targetVertex+" "+flow+"/"+capacity;
+    }
     /**
      * @return the fromVertex
      */
